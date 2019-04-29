@@ -3,7 +3,7 @@ const validate = require('express-validation');
 const exampleController = require('../controllers/example.js');
 const router = new express.Router();
 
-const postExample = require('./validators/example.js');
+const postExample = require('../validators/example.js');
 
 router.route('/example/').post(
     validate(postExample.validate), exampleController.postExample);
