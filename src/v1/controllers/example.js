@@ -5,6 +5,7 @@ const exampleLog = require('../components/example.js');
  * @param {string} res - outgoing response
  */
 async function postExample(req, res) {
+  const io = req.app.get('socketio'); // eslint-disable-line no-unused-vars
   try {
     const name = req.body.name;
     const email = req.body.email;
